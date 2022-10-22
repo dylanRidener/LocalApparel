@@ -19,3 +19,6 @@ to access this repo on android studio via github. To do so, follow the steps bel
     
   (Note that this process may vary depending on OS)
   
+
+I'm still reading up on on the detail on how pushing and pulling from origin will 
+work between us all but this should be the starting point.
