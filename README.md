@@ -3,9 +3,7 @@
 READ ME - 
 
 Hello, 
-
-So, I figured the best work flow would be with github connecting to 
-the Android studio IDE. 
+So, I figured the best work flow would be with github connecting to the Android studio IDE. 
 
 To set up github with Android studio, do steps 1 and 2 on the below link:
 https://medium.com/code-yoga/how-to-link-android-studio-with-github-312037a13b99
