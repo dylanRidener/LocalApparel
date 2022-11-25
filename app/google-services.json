@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "969408349510",
-    "project_id": "localapparel-d8bb1",
-    "storage_bucket": "localapparel-d8bb1.appspot.com"
+    "project_number": "371012006162",
+    "project_id": "localapparel-a0758",
+    "storage_bucket": "localapparel-a0758.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:969408349510:android:bc34aebb7240291b391147",
+        "mobilesdk_app_id": "1:371012006162:android:95ba71028bb4fae96a83cb",
         "android_client_info": {
           "package_name": "root.localApparel"
         }
       },
       "oauth_client": [
         {
-          "client_id": "969408349510-cd64i2ccm5dn2gs770uo0grasfgq2on5.apps.googleusercontent.com",
+          "client_id": "371012006162-cpigujfa096sjek2gark7rkucbl391dr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAS187YQYbnilo8owjk0-pRV3ogxook8Vc"
+          "current_key": "AIzaSyCv8oiILDCWqPiJ7wvRdweA9MP0dtGjuSA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "969408349510-cd64i2ccm5dn2gs770uo0grasfgq2on5.apps.googleusercontent.com",
+              "client_id": "371012006162-cpigujfa096sjek2gark7rkucbl391dr.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
