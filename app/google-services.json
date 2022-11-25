@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "969408349510",
+    "project_id": "localapparel-d8bb1",
+    "storage_bucket": "localapparel-d8bb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969408349510:android:bc34aebb7240291b391147",
+        "android_client_info": {
+          "package_name": "root.localApparel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969408349510-cd64i2ccm5dn2gs770uo0grasfgq2on5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS187YQYbnilo8owjk0-pRV3ogxook8Vc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969408349510-cd64i2ccm5dn2gs770uo0grasfgq2on5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
