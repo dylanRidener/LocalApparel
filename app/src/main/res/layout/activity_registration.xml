@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="90dp"
         android:gravity="center"
         android:text="Sign Up Here"
-        android:textColor="@color/registration_gray"
+        android:textColor="@color/pink_theme"
         android:textSize="28sp"
         android:textStyle="bold|italic" />
 
@@ -25,9 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/teacher"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="100dp"
         android:text="Name"
-        android:textColor="@color/registration_gray" />
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/register_name"
@@ -38,8 +38,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/edit"
-        android:drawableStart="@drawable/name"
+        android:background="@drawable/text_box_registration"
+        android:drawableStart="@drawable/name_arrow"
         android:hint="Your Name..."
         android:inputType="text"
         android:padding="8dp" />
@@ -52,7 +52,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
         android:text="Email"
-        android:textColor="@color/registration_gray" />
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/register_email"
@@ -63,8 +63,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/edit"
-        android:drawableStart="@drawable/ic_email"
+        android:background="@drawable/text_box_registration"
+        android:drawableStart="@drawable/ic_baseline_email_24"
         android:hint="Email..."
         android:inputType="textEmailAddress"
         android:padding="8dp" />
@@ -77,7 +77,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
         android:text="Password"
-        android:textColor="@color/registration_gray" />
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/register_password"
@@ -88,8 +88,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/edit"
-        android:drawableStart="@drawable/password"
+        android:background="@drawable/text_box_registration"
+        android:drawableStart="@drawable/name_arrow"
         android:hint="Password..."
         android:inputType="textPassword"
         android:padding="8dp" />
@@ -98,17 +98,19 @@
         android:id="@+id/register_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/pink_theme"
         android:layout_below="@+id/register_password"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/buttonss"
         android:padding="4dp"
         android:text="Create Account"
         android:textAllCaps="false"
-        android:textColor="@android:color/background_light"
+        android:textColor="@color/registration_gray"
         android:textSize="24sp" />
-
+<!--in order to change the default purple color of button:
+    https://www.youtube.com/watch?v=AdlxIdYus14
+-->
     <TextView
         android:id="@+id/homepage"
         android:layout_width="match_parent"
