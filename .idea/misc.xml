@@ -4,11 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4805" />
+        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2905" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4805" />
+        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/name_arrow.xml" value="0.2905" />
+        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/registration_button.xml" value="0.2905" />
+        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/text_box_registration.xml" value="0.2905" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_dashboard.xml" value="0.1" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_main.xml" value="0.45085470085470086" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_registration.xml" value="0.22" />
+        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_registration.xml" value="0.33" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_splash_screen.xml" value="0.33" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/replacement/app/src/main/res/layout/activity_splash_screen.xml" value="0.2672239108409321" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2345" />
