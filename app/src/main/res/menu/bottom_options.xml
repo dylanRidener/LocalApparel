@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_art"
+        android:title="My Profile" />
+    <item
+        android:id="@+id/to_buy"
+        android:icon="@drawable/buy_art"
+        android:title="Buy" />
+
+    <item
+        android:id="@+id/rent"
+        android:icon="@drawable/rent_art"
+        android:title="Rent" />
+    <item
+        android:id="@+id/closet"
+        android:icon="@drawable/closet"
+        android:title="Selling Closet" />
+
+    <item
+        android:id="@+id/help_page"
+        android:icon="@drawable/help_art"
+        android:title="Help" />
+</menu>
