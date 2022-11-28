@@ -9,4 +9,14 @@
 
     <string name="comment_text">Comments/Concerns</string>
 
+    <string name="item_name">Clothing Item Name</string>
+
+    <string name="buy">Buy</string>
+
+    <string name="rent">Rent</string>
+
+    <string name="price">Price</string>
+
+    <string name="item_description">Description</string>
+
 </resources>
