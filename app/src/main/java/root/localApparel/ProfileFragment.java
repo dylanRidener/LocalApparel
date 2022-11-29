@@ -52,43 +52,42 @@ public class ProfileFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Button btn = (Button) findViewbyId(R.id.prof_pastorders);
+//        Button btn = (Button) findViewbyId(R.id.prof_pastorders);
+//
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openSellingCloset();
+//            }
+//
+//
+//        });
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSellingCloset();
-            }
 
-
-        });
-
-
-        }
-
-    private Object findViewbyId(int prof_pastorders) {
     }
 
-    public void openSellingCloset() {
-        Intent intent = new Intent(this, SellingClosetFragment.class);
-        startActivity(intent);
-
-
-       if (getArguments() != null) {
-           mParam1 = getArguments().getString(ARG_PARAM1);
-           mParam2 = getArguments().getString(ARG_PARAM2);
-       }
-
-
-    
-
-    private Object findViewbyId(int prof_pastorders) {
+//    private Object findViewbyId(int prof_pastorders) {
+//    }
+//
+//    public void openSellingCloset() {
+//        Intent intent = new Intent(this, SellingClosetFragment.class);
+//        startActivity(intent);
+//
+//
+//        if (getArguments() != null) {
+//            mParam1 = getArguments().getString(ARG_PARAM1);
+//            mParam2 = getArguments().getString(ARG_PARAM2);
+//        }
+//
+//
+//        private Object findViewbyId ( int prof_pastorders){
+//        }
+//
+//        @Override
+//        public View onCreateView (LayoutInflater inflater, ViewGroup container,
+//                Bundle savedInstanceState){
+//            // Inflate the layout for this fragment
+//            return inflater.inflate(R.layout.fragment_profile, container, false);
+//        }
     }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
-    }
-}
+//}
