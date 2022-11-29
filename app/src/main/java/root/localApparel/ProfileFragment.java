@@ -1,5 +1,6 @@
 package root.localApparel;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,10 +51,38 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
+        Button btn = (Button) findViewbyId(R.id.prof_pastorders);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSellingCloset();
+            }
+
+
+        });
+
+
         }
+
+    private Object findViewbyId(int prof_pastorders) {
+    }
+
+    public void openSellingCloset() {
+        Intent intent = new Intent(this, SellingClosetFragment.class);
+        startActivity(intent);
+
+
+       if (getArguments() != null) {
+           mParam1 = getArguments().getString(ARG_PARAM1);
+           mParam2 = getArguments().getString(ARG_PARAM2);
+       }
+
+
+    
+
+    private Object findViewbyId(int prof_pastorders) {
     }
 
     @Override
