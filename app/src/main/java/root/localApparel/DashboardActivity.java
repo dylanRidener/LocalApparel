@@ -75,13 +75,13 @@ public class DashboardActivity extends AppCompatActivity {
                     fragmentTransaction3.commit();
                     return true;
 
-//                case R.id.help_page:
-//                    actionBar.setTitle("Help Page");
-//                    HelpPage fragment4 = new HelpPage();
-//                    FragmentTransaction fragmentTransaction4 = getSupportFragmentManager().beginTransaction();
-//                    fragmentTransaction4.replace(R.id.content, fragment4, "");
-//                    fragmentTransaction4.commit();
-//                    return true;
+                case R.id.help_page:
+                    actionBar.setTitle("Help Page");
+                    HelpPage fragment4 = new HelpPage();
+                    FragmentTransaction fragmentTransaction4 = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction4.replace(R.id.content, fragment4, "");
+                    fragmentTransaction4.commit();
+                    return true;
             }
             return false;
         }

@@ -1,17 +1,19 @@
 package root.localApparel;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+import androidx.fragment.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class HelpPage extends AppCompatActivity{
+
+public class HelpPage extends Fragment{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.help_page);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.help_page, container, false);
     }
 }
 
