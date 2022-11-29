@@ -102,8 +102,8 @@
                 android:background="@drawable/registration_button"
                 android:padding="4dp"
                 android:text="Login"
-                android:textAllCaps="false"
-                android:textColor="@color/registration_gray"
+                android:textAllCaps="true"
+                android:textColor="@android:color/background_light"
                 android:textSize="24sp" />
 
             <TextView

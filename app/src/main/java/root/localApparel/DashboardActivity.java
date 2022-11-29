@@ -32,7 +32,6 @@ public class DashboardActivity extends AppCompatActivity {
         navigationView.setOnNavigationItemSelectedListener(selectedListener);
         actionBar.setTitle("Home");
 
-        // When we open the application first profile should be shown to the user
         ProfileFragment fragment = new ProfileFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.content, fragment, "");
