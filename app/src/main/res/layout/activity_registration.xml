@@ -105,8 +105,8 @@
         android:layout_marginRight="30dp"
         android:padding="4dp"
         android:text="Create Account"
-        android:textAllCaps="false"
-        android:textColor="@color/registration_gray"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp" />
 <!--in order to change the default purple color of button:
     https://www.youtube.com/watch?v=AdlxIdYus14

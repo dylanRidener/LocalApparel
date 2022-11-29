@@ -19,14 +19,11 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".DashboardActivity"
-            android:exported="false" />
+            android:name=".DashboardActivity" />
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
+            android:name=".LoginActivity" />
         <activity
-            android:name=".RegistrationActivity"
-            android:exported="false" />
+            android:name=".RegistrationActivity"/>
         <activity
             android:name=".SplashScreen"
             android:exported="true">
