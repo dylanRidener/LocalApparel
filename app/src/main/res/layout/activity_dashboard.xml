@@ -22,6 +22,11 @@
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         app:labelVisibilityMode="labeled"
+
+
+        app:backgroundTint="@color/pink_theme"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
         app:menu="@menu/bottom_options">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

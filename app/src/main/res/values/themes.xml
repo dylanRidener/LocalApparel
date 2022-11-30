@@ -3,11 +3,12 @@
     <style name="Theme.LocalApparel" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/pink_theme</item>
-        <item name="colorPrimaryVariant">@color/pink_theme</item>
+        <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/pink_theme</item>
+        <item name="titleTextColor">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/blue_theme</item>
-        <item name="colorSecondaryVariant">@color/blue_theme</item>
+        <item name="colorSecondaryVariant">@color/black</item>
         <item name="colorOnSecondary">@color/blue_theme</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
