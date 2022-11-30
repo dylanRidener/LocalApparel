@@ -44,8 +44,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         ActionBar actionBar = getSupportActionBar(); //is coming back null
         actionBar.setTitle("Create Account");
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(false);
 
         // initialising the layout items
         email = findViewById(R.id.login_email);

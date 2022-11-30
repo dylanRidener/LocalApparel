@@ -39,13 +39,13 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Create Account");
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(false);//
+        actionBar.setDisplayHomeAsUpEnabled(false);//
         email = findViewById(R.id.register_email);
         name = findViewById(R.id.register_name);
         password = findViewById(R.id.register_password);
         mRegister = findViewById(R.id.register_button);
-        existaccount = findViewById(R.id.homepage);
+        existaccount = findViewById(R.id.profile);//
         mAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Register");
