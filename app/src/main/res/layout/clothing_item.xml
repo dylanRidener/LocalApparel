@@ -47,9 +47,9 @@
 
     <TextView
         android:id="@+id/priceView"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="80dp"
-        android:layout_marginStart="204dp"
+        android:layout_marginStart="220dp"
         android:layout_marginTop="324dp"
         android:text="@string/price"
         android:textColor="@color/teal_700"
@@ -61,10 +61,22 @@
         android:id="@+id/DesView"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="420dp"
         android:text="@string/item_description"
         android:textColor="@color/teal_700"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/SubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="644dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/post_item"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
