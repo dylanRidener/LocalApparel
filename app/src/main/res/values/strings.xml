@@ -19,4 +19,6 @@
 
     <string name="item_description">Description</string>
 
+    <string name="post_item">Post</string>
+
 </resources>
