@@ -15,9 +15,9 @@
 
     <string name="rent">Rent</string>
 
-    <string name="price">Price</string>
+    <string name="price">Price: $</string>
 
-    <string name="item_description">Description</string>
+    <string name="item_description">Description:</string>
 
     <string name="post_item">Post</string>
 
