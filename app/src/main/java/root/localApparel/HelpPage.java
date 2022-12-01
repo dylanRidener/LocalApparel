@@ -21,11 +21,10 @@ public class HelpPage extends Fragment{
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editText.getText().clear();
                 editText.setText(" ");
             }
         });
-        return inflater.inflate(R.layout.help_page, container, false);
+        return view;
     }
 }
 
