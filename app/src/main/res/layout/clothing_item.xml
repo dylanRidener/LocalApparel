@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:id="@+id/clothing_item">
 
-    <TextView
+    <EditText
         android:id="@+id/itemTitle"
         android:layout_width="280dp"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="4dp"
         android:text="@string/item_name"
@@ -22,7 +22,7 @@
         android:layout_width="217dp"
         android:layout_height="202dp"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="84dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/add_clothing_foreground" />
@@ -48,25 +48,37 @@
 
     <TextView
         android:id="@+id/priceView"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="324dp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="328dp"
         android:text="@string/price"
         android:textColor="@color/teal_700"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/DesView"
+    <EditText
+        android:id="@+id/price_box"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="308dp"
+        android:text="$"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Des_box"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="420dp"
         android:text="@string/item_description"
         android:textColor="@color/teal_700"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
