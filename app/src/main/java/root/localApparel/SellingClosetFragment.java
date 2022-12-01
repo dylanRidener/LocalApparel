@@ -1,12 +1,15 @@
 package root.localApparel;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +61,36 @@ public class SellingClosetFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_selling_closet, container, false);
+
+//        Button addBtn = (Button) rootView.findViewById(R.id.AddButton);
+//
+//        addBtn.setOnClickListener((View.OnClickListener) this);
+//
+//
+//        addBtn.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v)
+//            {
+//                // Launching new Activity on selecting single List Item
+//                Intent i = new Intent(getActivity(), AddClothes.class);
+//                startActivity(i);
+//            }
+//        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_selling_closet, container, false);
+        return rootView;
     }
+
+//    public void onClick(View view) {
+//        Fragment fragment = null;
+//        switch (view.getId()) {
+//            case R.id.AddButton:
+//                AddClothes fragment1 = new AddClothes();
+//                FragmentTransaction fragmentTransaction3 = getFragmentManager().beginTransaction();
+//                fragmentTransaction3.replace(R.id.AddButton, fragment1, "");
+//                fragmentTransaction3.commit();
+//                break;
+//        }
+//    }
+
 }
