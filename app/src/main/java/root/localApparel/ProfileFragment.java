@@ -67,9 +67,12 @@ public class ProfileFragment extends Fragment {
         String uid = firebaseUser.getUid();
 
         name.setText(firebaseUser.getEmail());
+      //  email.setText(firebaseAuth.getInstance().getCurrentUser().getDisplayName());
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 for (DataSnapshot snapshot1 : snapshot.getChildren()) {
                     // Retrieving Data from firebase
                     if (snapshot1.child("uid").getValue().equals(uid)) {
