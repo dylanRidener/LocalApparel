@@ -19,6 +19,8 @@
 
     <string name="item_description">Description:</string>
 
-    <string name="post_item">Post</string>
+    <string name="post_rent">Post to Rent</string>
+
+    <string name="post_buy">Post to Buy</string>
 
 </resources>

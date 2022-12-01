@@ -23,19 +23,4 @@ public class AddClothes extends Fragment {
         return inflater.inflate(R.layout.clothing_item, container, false);
     }
 
-    public void onCheckboxClicked(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
-
-        // Check which checkbox was clicked
-        switch (view.getId()) {
-            case R.id.checkbox_buy:
-                if (checked) {
-                    //add item to buy page
-                } else {
-                    //add item to rent page
-                }
-                break;
-        }
-    }
 }

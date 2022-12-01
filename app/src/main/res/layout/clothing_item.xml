@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/clothing_item">
@@ -28,33 +29,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/add_clothing_foreground" />
 
-    <CheckBox
-        android:id="@+id/checkbox_buy"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="264dp"
-        android:text="@string/buy"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/checkbox_rent"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="312dp"
-        android:text="@string/rent"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/priceView"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginStart="152dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="296dp"
         android:text="@string/price"
         android:textColor="@color/teal_700"
@@ -66,7 +46,7 @@
         android:id="@+id/price_box"
         android:layout_width="160dp"
         android:layout_height="80dp"
-        android:layout_marginStart="252dp"
+        android:layout_marginStart="188dp"
         android:layout_marginTop="276dp"
         android:hint="Type Here..."
         android:inputType="text"
@@ -89,15 +69,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/SubmitButton"
+        android:id="@+id/PostRent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="272dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="580dp"
         android:backgroundTint="@color/teal_200"
-        android:text="@string/post_item"
-        android:textSize="30sp"
+        android:text="@string/post_rent"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/PostBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/post_buy"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/PostRent"
+        app:layout_constraintTop_toBottomOf="@+id/Des_box" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
