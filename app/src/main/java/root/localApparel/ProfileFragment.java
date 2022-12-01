@@ -116,7 +116,7 @@ public class ProfileFragment extends Fragment {
 //                startActivity(new Intent(getActivity(), EditProfilePage.class));
 //            }
 //        });
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return view;
 
     }
     @Override
