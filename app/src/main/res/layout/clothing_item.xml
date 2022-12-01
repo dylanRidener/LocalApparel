@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:id="@+id/clothing_item">
 
-    <TextView
+    <EditText
         android:id="@+id/itemTitle"
         android:layout_width="280dp"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="4dp"
         android:text="@string/item_name"
@@ -22,25 +22,28 @@
         android:layout_width="217dp"
         android:layout_height="202dp"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/add_clothing_foreground" />
 
-    <CheckBox android:id="@+id/checkbox_buy"
+    <CheckBox
+        android:id="@+id/checkbox_buy"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="284dp"
         android:text="@string/buy"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <CheckBox android:id="@+id/checkbox_rent"
+
+    <CheckBox
+        android:id="@+id/checkbox_rent"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="332dp"
         android:text="@string/rent"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,25 +51,51 @@
 
     <TextView
         android:id="@+id/priceView"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="324dp"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="320dp"
         android:text="@string/price"
         android:textColor="@color/teal_700"
-        android:textSize="30sp"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/price_box"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="292dp"
+        android:hint="Type Here..."
+        android:inputType="text"
+        android:padding="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/DesView"
         android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="420dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="404dp"
         android:text="@string/item_description"
         android:textColor="@color/teal_700"
-        android:textSize="30sp"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/description_box"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="432dp"
+        android:hint="Type Here..."
+        android:inputType="text"
+        android:padding="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,8 +103,8 @@
         android:id="@+id/SubmitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="272dp"
-        android:layout_marginTop="644dp"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="656dp"
         android:backgroundTint="@color/teal_200"
         android:text="@string/post_item"
         android:textSize="30sp"
