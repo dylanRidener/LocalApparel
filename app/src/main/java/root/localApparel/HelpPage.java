@@ -21,7 +21,7 @@ public class HelpPage extends Fragment{
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editText.setText(" ");
+                editText.setText("");
             }
         });
         return view;
