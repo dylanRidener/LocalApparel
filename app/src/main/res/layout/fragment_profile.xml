@@ -34,7 +34,6 @@
         android:id="@+id/name_prof"
         android:layout_width="180dp"
         android:layout_height="30dp"
-<<<<<<< HEAD
         android:layout_marginStart="167dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="159dp"
@@ -42,14 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-=======
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="8dp"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:textColor="#000000" />
->>>>>>> 2049077b3fa715658ad03442c6b304ce223b7420
+
 
     <TextView
         android:id="@+id/email_prof"
@@ -57,18 +49,11 @@
         android:layout_height="32dp"
         android:layout_marginStart="167dp"
         android:layout_marginTop="14dp"
-<<<<<<< HEAD
         android:layout_marginEnd="169dp"
         android:text="Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
-=======
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_prof"
-        tools:textColor="#000000" />
->>>>>>> 2049077b3fa715658ad03442c6b304ce223b7420
 
     <ImageView
         android:id="@+id/imageView"
