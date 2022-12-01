@@ -1,5 +1,6 @@
 package root.localApparel;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,7 +13,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseUser;
@@ -24,22 +24,18 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ProfileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class ProfileFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-    private FirebaseAuth firebaseAuth= FirebaseAuth.getInstance();
-    TextView name, email, password;
-    FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+    ProgressDialog pd;
+    FirebaseAuth firebaseAuth;
+    TextView name, email;
+    FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    String uid;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -49,31 +45,9 @@ public class ProfileFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ProfileFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ProfileFragment newInstance(String param1, String param2) {
-        ProfileFragment fragment = new ProfileFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        setHasOptionsMenu(true);
-        super.onCreate(savedInstanceState);
 
 
-    }
+
 
 
     @Override
@@ -81,19 +55,25 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         firebaseAuth = FirebaseAuth.getInstance();
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference("Users");
+        firebaseUser = firebaseAuth.getCurrentUser();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("Users");
+        pd = new ProgressDialog(getActivity());
+        pd.setCanceledOnTouchOutside(false);
+        email = view.findViewById(R.id.email_prof);
+        name = view.findViewById(R.id.name_prof);
+        uid = FirebaseAuth.getInstance().getUid();
 
-        email = view.findViewById(R.id.register_email);
-        name = view.findViewById(R.id.register_name);
-        password = view.findViewById(R.id.register_password);
         String uid = firebaseUser.getUid();
+
+        name.setText(firebaseUser.getEmail());
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot snapshot1 : snapshot.getChildren()) {
                     // Retrieving Data from firebase
                     if (snapshot1.child("uid").getValue().equals(uid)) {
+
                         String name1 = "" + snapshot1.child("name").getValue().toString();
                         String email1 = "" + snapshot1.child("email").getValue().toString();
 
@@ -116,7 +96,7 @@ public class ProfileFragment extends Fragment {
 //                startActivity(new Intent(getActivity(), EditProfilePage.class));
 //            }
 //        });
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return view;
 
     }
     @Override
@@ -134,5 +114,11 @@ public class ProfileFragment extends Fragment {
         }
         return super.onOptionsItemSelected(item);
     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+        super.onCreate(savedInstanceState);
 
+
+    }
 }

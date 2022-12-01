@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
 
     <Button
         android:id="@+id/button9"
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginTop="52dp"
+        android:layout_marginLeft="5dp"
         android:text="My Profile"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,20 +31,26 @@
 
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="67dp"
+        android:id="@+id/name_prof"
+        android:layout_width="180dp"
         android:layout_height="30dp"
-        android:text="Name"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="89dp" />
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:textColor="#000000" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/email_prof"
         android:layout_width="57dp"
         android:layout_height="32dp"
-        android:text="Email"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="133dp" />
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="14dp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_prof"
+        tools:textColor="#000000" />
 
     <ImageView
         android:id="@+id/imageView"
