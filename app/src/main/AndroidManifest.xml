@@ -4,6 +4,7 @@
     package="root.localApparel">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -24,6 +25,9 @@
             android:name=".LoginActivity" />
         <activity
             android:name=".RegistrationActivity"/>
+        <activity
+            android:name=".ProfileEditor"
+            android:exported="false" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">
