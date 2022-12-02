@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -13,8 +14,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -22,22 +27,24 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.bumptech.glide.Glide;
 
+
+import java.util.ArrayList;
 
 
 public class ProfileFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    ProgressDialog pd;
-    FirebaseAuth firebaseAuth;
+//    ProgressDialog pd;
+    private FirebaseAuth firebaseAuth;
+
     TextView name, email;
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     String uid;
+    ImageView userPic;
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -45,42 +52,52 @@ public class ProfileFragment extends Fragment {
         // Required empty public constructor
     }
 
-
-
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        // firebase pull for user data
         firebaseUser = firebaseAuth.getCurrentUser();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
-        pd = new ProgressDialog(getActivity());
-        pd.setCanceledOnTouchOutside(false);
+
+        //un-needed
+//        pd = new ProgressDialog(getActivity());
+//        pd.setCanceledOnTouchOutside(false);
+
+        // create associated data to view
         email = view.findViewById(R.id.email_prof);
         name = view.findViewById(R.id.name_prof);
         uid = FirebaseAuth.getInstance().getUid();
 
-        String uid = firebaseUser.getUid();
+        // creating editor button for username
+        Button editor = view.findViewById(R.id.button9);
 
-        name.setText(firebaseUser.getEmail());
-      //  email.setText(firebaseAuth.getInstance().getCurrentUser().getDisplayName());
+//        name.setText(databaseReference.); //this works to pull data from firebase but it's the only thing that's worked
+//        email.setText(firebaseUser.getDisplayName());
+
+//        email.setText(firebaseAuth.getInstance().getCurrentUser().getDisplayName());
 
         databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
+            @Override //pulls data from firebase
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot snap : snapshot.getChildren()) {
+                    if (snap.child("uid").getValue().equals(uid)) {
+                        String name1 = "" + snap.child("name").getValue().toString();
+                        String email1 = "" + snap.child("email").getValue().toString();
+                        String pic = "" + snap.child("image").getValue().toString();
 
-                for (DataSnapshot snapshot1 : snapshot.getChildren()) {
-                    // Retrieving Data from firebase
-                    if (snapshot1.child("uid").getValue().equals(uid)) {
+                        //populate pic
+                        try {
+                            Glide.with(getActivity()).load(pic).into(userPic);
+                        } catch (Exception error) {
 
-                        String name1 = "" + snapshot1.child("name").getValue().toString();
-                        String email1 = "" + snapshot1.child("email").getValue().toString();
+                        }
 
-
+                        //populate name and email
+//                        email = dataSnapshot.child("email").getValue(String.class);
                         name.setText(name1);
                         email.setText(email1);
                     }
@@ -90,15 +107,14 @@ public class ProfileFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(getActivity(), EditProfilePage.class));
-//            }
-//        });
+        editor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ProfileEditor.class));
+            }
+        });
         return view;
 
     }
