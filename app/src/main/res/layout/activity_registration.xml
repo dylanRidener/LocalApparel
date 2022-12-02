@@ -98,11 +98,11 @@
         android:id="@+id/register_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/text_box_registration"
         android:layout_below="@+id/register_password"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
+        android:background="@drawable/text_box_registration"
         android:padding="4dp"
         android:text="Create Account"
         android:textAllCaps="true"
@@ -112,7 +112,7 @@
     https://www.youtube.com/watch?v=AdlxIdYus14
 -->
     <TextView
-        android:id="@+id/homepage"
+        android:id="@+id/profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_button"
