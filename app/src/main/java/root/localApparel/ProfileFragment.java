@@ -35,8 +35,6 @@ import java.util.ArrayList;
 
 public class ProfileFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 //    ProgressDialog pd;
     private FirebaseAuth firebaseAuth;
 
@@ -47,14 +45,12 @@ public class ProfileFragment extends Fragment {
     String uid;
     ImageView userPic;
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     public ProfileFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -79,7 +75,9 @@ public class ProfileFragment extends Fragment {
         // creating editor button for username
         Button editor = view.findViewById(R.id.button9);
 
-//        name.setText(firebaseUser.getEmail());
+//        name.setText(databaseReference.); //this works to pull data from firebase but it's the only thing that's worked
+//        email.setText(firebaseUser.getDisplayName());
+
 //        email.setText(firebaseAuth.getInstance().getCurrentUser().getDisplayName());
 
         databaseReference.addValueEventListener(new ValueEventListener() {
