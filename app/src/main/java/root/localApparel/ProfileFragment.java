@@ -97,6 +97,7 @@ public class ProfileFragment extends Fragment {
                         }
 
                         //populate name and email
+//                        email = dataSnapshot.child("email").getValue(String.class);
                         name.setText(name1);
                         email.setText(email1);
                     }
