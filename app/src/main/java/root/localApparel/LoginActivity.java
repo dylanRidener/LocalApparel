@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText email, password, name;
     private Button mlogin;
-    private TextView newdnewaccount, reocverpass;
+    private TextView newdnewaccount, recoverpass;
     FirebaseUser currentUser;
     private ProgressDialog loadingBar;
     private FirebaseAuth mAuth;
@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.login_email);
         password = findViewById(R.id.login_password);
         newdnewaccount = findViewById(R.id.needs_new_account);
-        reocverpass = findViewById(R.id.forgetp);
+        recoverpass = findViewById(R.id.forgetp);
         mAuth = FirebaseAuth.getInstance();
         mlogin = findViewById(R.id.login_button);
         loadingBar = new ProgressDialog(this);
@@ -88,12 +88,14 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         // Recover Your Password using email
-        reocverpass.setOnClickListener(new View.OnClickListener() {
+        recoverpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showRecoverPasswordDialog();
             }
         });
+
+
     }
 
     private void showRecoverPasswordDialog() {

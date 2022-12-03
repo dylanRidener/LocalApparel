@@ -125,5 +125,4 @@
         android:textColor="@color/registration_gray"
         android:textSize="17sp"
         android:textStyle="bold" />
-
 </RelativeLayout>

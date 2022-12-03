@@ -1,12 +1,10 @@
 package root.localApparel;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -17,9 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -42,11 +38,7 @@ public class ProfileFragment extends Fragment {
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    String uid;
-    ImageView userPic;
-
-    private String mParam1;
-    private String mParam2;
+    ImageView userPicPaged;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -70,7 +62,7 @@ public class ProfileFragment extends Fragment {
         // create associated data to view
         email = view.findViewById(R.id.email_prof);
         name = view.findViewById(R.id.name_prof);
-        uid = FirebaseAuth.getInstance().getUid();
+        userPicPaged = view.findViewById(R.id.userPic);
 
         // creating editor button for username
         Button editor = view.findViewById(R.id.button9);
@@ -84,20 +76,23 @@ public class ProfileFragment extends Fragment {
             @Override //pulls data from firebase
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot snap : snapshot.getChildren()) {
-                    if (snap.child("uid").getValue().equals(uid)) {
+                    if (snap.child("uid").getValue().equals(FirebaseAuth.getInstance().getUid())) {
                         String name1 = "" + snap.child("name").getValue().toString();
                         String email1 = "" + snap.child("email").getValue().toString();
                         String pic = "" + snap.child("image").getValue().toString();
 
                         //populate pic
                         try {
-                            Glide.with(getActivity()).load(pic).into(userPic);
+                            if (pic == "") {
+
+                            } else {
+                                Glide.with(getActivity()).load(pic).into(userPicPaged);
+                            }
                         } catch (Exception error) {
 
                         }
 
                         //populate name and email
-//                        email = dataSnapshot.child("email").getValue(String.class);
                         name.setText(name1);
                         email.setText(email1);
                     }

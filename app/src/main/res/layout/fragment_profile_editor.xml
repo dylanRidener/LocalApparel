@@ -12,8 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:background="@color/pink_theme"
         android:gravity="center"
+        android:background="@color/pink_theme"
+        android:textColor="@color/black"
         android:text="Edit Profile"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,64 +24,91 @@
 
     <TextView
         android:id="@+id/name_prof"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="24dp"
-        android:background="@color/pink_theme"
         android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:background="@color/pink_theme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
-        android:id="@+id/name_handler"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:background="@color/pink_theme"
-        android:gravity="center"
-        android:text="Name:"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/name_prof"
-        app:layout_constraintTop_toTopOf="@+id/name_prof" />
-
-    <TextView
         android:id="@+id/email_prof"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="24dp"
-        android:background="@color/pink_theme"
         android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:background="@color/pink_theme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_prof" />
-
-    <TextView
-        android:id="@+id/email_handler"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:background="@color/pink_theme"
-        android:gravity="center"
-        android:text="Email: "
-        android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/email_prof"
-        app:layout_constraintTop_toTopOf="@+id/email_prof" />
 
     <TextView
         android:id="@+id/password"
         android:layout_width="180dp"
         android:layout_height="30dp"
-        android:layout_marginTop="24dp"
-        android:text="Change Password"
-        android:textSize="20dp"
-        android:gravity="center"
+        android:layout_marginTop="8dp"
         android:background="@color/pink_theme"
+        android:gravity="center"
+        android:text="Change Password"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_prof"
-        app:layout_constraintVertical_bias="0.344" />
+        app:layout_constraintTop_toBottomOf="@+id/picture" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/pink_theme"
+        android:gravity="center"
+        android:text="Change Email"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/pink_theme"
+        android:gravity="center"
+        android:text="Change Name"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/picture"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/pink_theme"
+        android:gravity="center"
+        android:text="Change Picture"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <ImageView
         android:id="@+id/userPic"
@@ -89,7 +117,7 @@
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/email_prof"
         app:srcCompat="@drawable/profile_pic_foreground" />
 
     <TextView
@@ -97,9 +125,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="396dp"
+        android:layout_marginTop="352dp"
         android:background="@color/pink_theme"
         android:text="ZIP: 56565"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/userPic"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
