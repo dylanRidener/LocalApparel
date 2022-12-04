@@ -2,7 +2,7 @@ package root.localApparel;
 
 public class PostObjects {
     String pid, ptime;
-    String title, description;
+    String title, description, price;
     String udp, uemail, uid, uimage, uname;
 
     public String getDescription() {
@@ -11,6 +11,14 @@ public class PostObjects {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public String getPid() {

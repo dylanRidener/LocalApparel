@@ -47,6 +47,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/pricetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple_500"
+                    android:layout_gravity="right"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -58,7 +65,7 @@
             android:layout_height="wrap_content"
             android:background="@color/pink_theme"
             android:text="Title"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -67,6 +74,7 @@
             android:background="@color/pink_theme"
             android:layout_height="wrap_content"
             android:text="Description"
+            android:textSize="15sp"
             android:textColor="@color/black" />
 
 

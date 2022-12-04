@@ -46,7 +46,7 @@ public class AddClothes extends Fragment {
     }
 
     FirebaseAuth firebaseAuth;
-    EditText title, des;
+    EditText title, des, price;
     private static final int STORAGE_REQUEST = 1000;
     private static final int IMAGEPICK_GALLERY_REQUEST = 2000;
     String storagePermission[];
@@ -70,7 +70,7 @@ public class AddClothes extends Fragment {
         title = view.findViewById(R.id.itemTitle);
         des = view.findViewById(R.id.Des_box);
         image = view.findViewById(R.id.clothesView);
-        upload = view.findViewById(R.id.PostRent);
+        price = view.findViewById(R.id.price_box);
         upload = view.findViewById(R.id.PostRent);
         pd = new ProgressDialog(getContext());
         pd.setCanceledOnTouchOutside(false);
@@ -119,7 +119,7 @@ public class AddClothes extends Fragment {
             public void onClick(View v) {
                 String titl = "" + title.getText().toString().trim();
                 String description = "" + des.getText().toString().trim();
-
+                String item_price = "" + price.getText().toString().trim();
                 // If empty set error
                 if (TextUtils.isEmpty(titl)) {
                     title.setError("Title Cant be empty");
@@ -139,7 +139,7 @@ public class AddClothes extends Fragment {
                     Toast.makeText(getContext(), "Select an Image", Toast.LENGTH_LONG).show();
                     return;
                 } else {
-                    uploadData(titl, description);
+                    uploadData(titl, description,item_price);
                 }
             }
         });
@@ -161,7 +161,7 @@ public class AddClothes extends Fragment {
     }
 
     // Upload the value of blog data into firebase
-    private void uploadData(final String titl, final String description) {
+    private void uploadData(final String titl, final String description, String item_price) {
         // show the progress dialog box
         pd.setMessage("Publishing Post");
         pd.show();
@@ -192,6 +192,7 @@ public class AddClothes extends Fragment {
                     hashMap.put("description", description);
                     hashMap.put("uimage", downloadUri);
                     hashMap.put("ptime", timestamp);
+                    hashMap.put("price", item_price);
 
                     // set the data into firebase and then empty the title ,description and image data
                     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Posts");
@@ -203,6 +204,7 @@ public class AddClothes extends Fragment {
                                     Toast.makeText(getContext(), "Published", Toast.LENGTH_LONG).show();
                                     title.setText("");
                                     des.setText("");
+                                    price.setText("");
                                     image.setImageURI(null);
                                     imageuri = null;
                                     Fragment addFrag = new SellingClosetFragment();

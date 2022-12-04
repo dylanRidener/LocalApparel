@@ -66,11 +66,13 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
         final String titlee = modelPosts.get(position).getTitle();
         final String descri = modelPosts.get(position).getDescription();
         final String ptime = modelPosts.get(position).getPtime();
+        final String items_price = modelPosts.get(position).getPrice();
         String dp = modelPosts.get(position).getUdp();
         final String image = modelPosts.get(position).getUimage();
         holder.name.setText(nameh);
         holder.title.setText(titlee);
         holder.description.setText(descri);
+        holder.price.setText("$ " + items_price);
         try {
             Glide.with(context).load(dp).into(holder.picture);
         } catch (Exception e) {
@@ -128,7 +130,7 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
 
     class MyHolder extends RecyclerView.ViewHolder {
         ImageView picture, image;
-        TextView name, title, description;
+        TextView name, title, description, price;
         LinearLayout profile;
 
         public MyHolder(@NonNull View itemView) {
@@ -138,7 +140,9 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
             name = itemView.findViewById(R.id.unametv);
             title = itemView.findViewById(R.id.ptitletv);
             description = itemView.findViewById(R.id.descript);
+            price = itemView.findViewById(R.id.pricetv);
             profile = itemView.findViewById(R.id.profilelayout);
+
         }
     }
 }
