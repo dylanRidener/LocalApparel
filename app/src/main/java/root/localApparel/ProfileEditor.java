@@ -47,7 +47,6 @@ import java.util.HashMap;
 public class ProfileEditor extends AppCompatActivity {
     private static final int STORAGE_REQUEST = 200;
     private static final int IMAGEPICK_GALLERY_REQUEST = 300;
-    private static final int IMAGE_PICKCAMERA_REQUEST = 400;
     private FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     FirebaseUser firebaseUser;

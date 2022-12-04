@@ -37,7 +37,8 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="296dp"
         android:text="@string/price"
-        android:textColor="@color/teal_700"
+        android:background="@color/blue_theme"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -72,24 +73,26 @@
         android:id="@+id/PostRent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="580dp"
-        android:backgroundTint="@color/teal_200"
+        android:backgroundTint="@color/blue_theme"
         android:text="@string/post_rent"
         android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/PostBuy"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/PostBuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="@color/teal_200"
+        android:backgroundTint="@color/blue_theme"
         android:text="@string/post_buy"
         android:textSize="25sp"
-        app:layout_constraintStart_toEndOf="@+id/PostRent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Des_box" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

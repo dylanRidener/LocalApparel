@@ -1,8 +1,9 @@
 package root.localApparel;
 
-public class ModelPosts {
-
-    String description;
+public class PostObjects {
+    String pid, ptime;
+    String title, description;
+    String udp, uemail, uid, uimage, uname;
 
     public String getDescription() {
         return description;
@@ -75,35 +76,5 @@ public class ModelPosts {
     public void setUname(String uname) {
         this.uname = uname;
     }
-
-    public String getPlike() {
-        return plike;
-    }
-
-    public void setPlike(String plike) {
-        this.plike = plike;
-    }
-
-    String pid;
-
-    public String getPcomments() {
-        return pcomments;
-    }
-
-    public void setPcomments(String pcomments) {
-        this.pcomments = pcomments;
-    }
-
-
-    String ptime, pcomments;
-
-    String title;
-
-    String udp;
-    String uemail;
-    String uid;
-    String uimage;
-
-    String uname, plike;
 
 }

@@ -1,9 +1,7 @@
 package root.localApparel;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -29,8 +27,8 @@ public class RentFragment extends Fragment {
     FirebaseAuth firebaseAuth;
     String myuid;
     RecyclerView recyclerView;
-    List<ModelPosts> posts;
-    AdapterPosts adapterPosts;
+    List<PostObjects> posts;
+    PostHolder postHolder;
 
     public RentFragment() {
         // Required empty public constructor
@@ -43,6 +41,7 @@ public class RentFragment extends Fragment {
         firebaseAuth = FirebaseAuth.getInstance();
         recyclerView = view.findViewById(R.id.postrecyclerview);
         recyclerView.setHasFixedSize(true);
+        myuid = firebaseAuth.getInstance().getUid();
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setReverseLayout(true);
         layoutManager.setStackFromEnd(true);
@@ -59,11 +58,14 @@ public class RentFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 posts.clear();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    ModelPosts modelPost = dataSnapshot1.getValue(ModelPosts.class);
-                    posts.add(modelPost);
-                    adapterPosts = new AdapterPosts(getActivity(), posts);
-                    recyclerView.setAdapter(adapterPosts);
+                    // uncoment this so people can't see their own posts!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//                    if (dataSnapshot1.child("uid").getValue() != null && !dataSnapshot1.child("uid").getValue().equals(myuid)) {
+                        PostObjects modelPost = dataSnapshot1.getValue(PostObjects.class);
+                        posts.add(modelPost);
+//                    }
                 }
+                postHolder = new PostHolder(getActivity(), posts);
+                recyclerView.setAdapter(postHolder);
             }
 
             @Override
