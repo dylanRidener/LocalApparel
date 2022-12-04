@@ -22,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -203,8 +204,9 @@ public class AddClothes extends Fragment {
                                     des.setText("");
                                     image.setImageURI(null);
                                     imageuri = null;
-                                    startActivity(new Intent(getContext(), DashboardActivity.class));
-                                    getActivity().finish();
+                                    Fragment addFrag = new SellingClosetFragment();
+                                    FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
+                                    fm.replace(R.id.content, addFrag).commit();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
