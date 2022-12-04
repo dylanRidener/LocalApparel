@@ -65,8 +65,8 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
         String nameh = modelPosts.get(position).getUname();
         final String titlee = modelPosts.get(position).getTitle();
         final String descri = modelPosts.get(position).getDescription();
-        final String ptime = modelPosts.get(position).getPtime();
         final String items_price = modelPosts.get(position).getPrice();
+        final String buyOrRent = modelPosts.get(position).getbuyOrRent();
         String dp = modelPosts.get(position).getUdp();
         final String image = modelPosts.get(position).getUimage();
         holder.name.setText(nameh);
@@ -130,6 +130,7 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
 
     class MyHolder extends RecyclerView.ViewHolder {
         ImageView picture, image;
+        LinearLayout toBuy;
         TextView name, title, description, price;
         LinearLayout profile;
 
@@ -142,7 +143,7 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
             description = itemView.findViewById(R.id.descript);
             price = itemView.findViewById(R.id.pricetv);
             profile = itemView.findViewById(R.id.profilelayout);
-
+            toBuy = itemView.findViewById(R.id.toBuy);
         }
     }
 }

@@ -74,7 +74,7 @@ public class SellingClosetFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 posts.clear();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    if (dataSnapshot1.child("uid").getValue() != null && dataSnapshot1.child("uid").getValue().equals(myuid)) {
+                    if (dataSnapshot1.child("uid").getValue().equals(myuid)) {
                         PostObjects modelPost = dataSnapshot1.getValue(PostObjects.class);
                         posts.add(modelPost);
                     }

@@ -3,54 +3,22 @@ package root.localApparel;
 public class PostObjects {
     String pid, ptime;
     String title, description, price;
-    String udp, uemail, uid, uimage, uname;
+    String udp, uemail, uid, uimage, uname, getbuyOrRent;
 
-    public String getDescription() {
-        return description;
+    public String getUid() {
+        return uid;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
-    public String getPrice() {
-        return price;
+    public String getUname() {
+        return uname;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public String getPid() {
-        return pid;
-    }
-
-    public void setPid(String pid) {
-        this.pid = pid;
-    }
-
-    public String getPtime() {
-        return ptime;
-    }
-
-    public void setPtime(String ptime) {
-        this.ptime = ptime;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getUdp() {
-        return udp;
-    }
-
-    public void setUdp(String udp) {
-        this.udp = udp;
+    public void setUname(String uname) {
+        this.uname = uname;
     }
 
     public String getUemail() {
@@ -61,12 +29,28 @@ public class PostObjects {
         this.uemail = uemail;
     }
 
-    public String getUid() {
-        return uid;
+    public String getUdp() {
+        return udp;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setUdp(String udp) {
+        this.udp = udp;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getUimage() {
@@ -77,12 +61,36 @@ public class PostObjects {
         this.uimage = uimage;
     }
 
-    public String getUname() {
-        return uname;
+    public String getPtime() {
+        return ptime;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
+    public void setPtime(String ptime) {
+        this.ptime = ptime;
     }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getbuyOrRent() {
+        return getbuyOrRent;
+    }
+
+    public void getbuyOrRent(String pid) {
+        this.getbuyOrRent = getbuyOrRent;
+    }
+
+
+
+
+
+
+
+
 
 }

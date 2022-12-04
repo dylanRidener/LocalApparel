@@ -52,12 +52,11 @@ public class AddClothes extends Fragment {
     String storagePermission[];
     ProgressDialog pd;
     ImageView image;
-//    String edititle, editdes, editimage;
 
     Uri imageuri = null;
     String name, email, uid, dp;
     DatabaseReference databaseReference;
-    Button upload;
+    Button uploadRent, uploadBuy;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -71,7 +70,8 @@ public class AddClothes extends Fragment {
         des = view.findViewById(R.id.Des_box);
         image = view.findViewById(R.id.clothesView);
         price = view.findViewById(R.id.price_box);
-        upload = view.findViewById(R.id.PostRent);
+        uploadRent = view.findViewById(R.id.PostRent);
+        uploadBuy = view.findViewById(R.id.PostBuy);
         pd = new ProgressDialog(getContext());
         pd.setCanceledOnTouchOutside(false);
         Intent intent = getActivity().getIntent();
@@ -114,7 +114,7 @@ public class AddClothes extends Fragment {
             }
         });
 
-        upload.setOnClickListener(new View.OnClickListener() {
+        uploadRent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String titl = "" + title.getText().toString().trim();
@@ -139,7 +139,37 @@ public class AddClothes extends Fragment {
                     Toast.makeText(getContext(), "Select an Image", Toast.LENGTH_LONG).show();
                     return;
                 } else {
-                    uploadData(titl, description,item_price);
+                    uploadData(titl, description,item_price, "Rent");
+                }
+            }
+        });
+
+        uploadBuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String titl = "" + title.getText().toString().trim();
+                String description = "" + des.getText().toString().trim();
+                String item_price = "" + price.getText().toString().trim();
+                // If empty set error
+                if (TextUtils.isEmpty(titl)) {
+                    title.setError("Title Cant be empty");
+                    Toast.makeText(getContext(), "Title can't be left empty", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                // If empty set error
+                if (TextUtils.isEmpty(description)) {
+                    des.setError("Description Cant be empty");
+                    Toast.makeText(getContext(), "Description can't be left empty", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                // If empty show error
+                if (imageuri == null) {
+                    Toast.makeText(getContext(), "Select an Image", Toast.LENGTH_LONG).show();
+                    return;
+                } else {
+                    uploadData(titl, description,item_price, "Buy");
                 }
             }
         });
@@ -161,8 +191,7 @@ public class AddClothes extends Fragment {
     }
 
     // Upload the value of blog data into firebase
-    private void uploadData(final String titl, final String description, String item_price) {
-        // show the progress dialog box
+    private void uploadData(final String titl, final String description, String item_price, String buyOrRent) {
         pd.setMessage("Publishing Post");
         pd.show();
         final String timestamp = String.valueOf(System.currentTimeMillis());
@@ -172,17 +201,14 @@ public class AddClothes extends Fragment {
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
         byte[] data = byteArrayOutputStream.toByteArray();
 
-        // initialising the storage reference for updating the data
         StorageReference storageReference1 = FirebaseStorage.getInstance().getReference().child(filepathname);
         storageReference1.putBytes(data).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                // getting the url of image uploaded
                 Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
                 while (!uriTask.isSuccessful()) ;
                 String downloadUri = uriTask.getResult().toString();
                 if (uriTask.isSuccessful()) {
-                    // if task is successful the update the data into firebase
                     HashMap<Object, String> hashMap = new HashMap<>();
                     hashMap.put("uid", uid);
                     hashMap.put("uname", name);
@@ -193,8 +219,8 @@ public class AddClothes extends Fragment {
                     hashMap.put("uimage", downloadUri);
                     hashMap.put("ptime", timestamp);
                     hashMap.put("price", item_price);
+                    hashMap.put("buyOrRent", buyOrRent);
 
-                    // set the data into firebase and then empty the title ,description and image data
                     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Posts");
                     databaseReference.child(timestamp).setValue(hashMap)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
