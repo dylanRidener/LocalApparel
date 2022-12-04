@@ -31,7 +31,6 @@ import java.util.ArrayList;
 
 public class ProfileFragment extends Fragment {
 
-//    ProgressDialog pd;
     private FirebaseAuth firebaseAuth;
 
     TextView name, email;
@@ -55,9 +54,6 @@ public class ProfileFragment extends Fragment {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
 
-        //un-needed
-//        pd = new ProgressDialog(getActivity());
-//        pd.setCanceledOnTouchOutside(false);
 
         // create associated data to view
         email = view.findViewById(R.id.email_prof);
@@ -67,10 +63,6 @@ public class ProfileFragment extends Fragment {
         // creating editor button for username
         Button editor = view.findViewById(R.id.button9);
 
-//        name.setText(databaseReference.); //this works to pull data from firebase but it's the only thing that's worked
-//        email.setText(firebaseUser.getDisplayName());
-
-//        email.setText(firebaseAuth.getInstance().getCurrentUser().getDisplayName());
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override //pulls data from firebase

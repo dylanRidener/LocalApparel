@@ -42,7 +42,7 @@ public class DashboardActivity extends AppCompatActivity {
             switch (menuItem.getItemId()) {
 
                 case R.id.profile:
-                    actionBar.setTitle("Profile");
+                    actionBar.setTitle("My Profile");
                     ProfileFragment fragment = new ProfileFragment();
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.content, fragment, "");
@@ -74,7 +74,7 @@ public class DashboardActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.help_page:
-                    actionBar.setTitle("Help Page");
+                    actionBar.setTitle("Help");
                     HelpPage fragment4 = new HelpPage();
                     FragmentTransaction fragmentTransaction4 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction4.replace(R.id.content, fragment4, "");
