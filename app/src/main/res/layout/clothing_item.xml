@@ -50,7 +50,7 @@
         android:layout_marginStart="188dp"
         android:layout_marginTop="276dp"
         android:hint="Type Here..."
-        android:inputType="text"
+        android:inputType="number"
         android:textColor="@color/teal_700"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
