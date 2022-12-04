@@ -71,6 +71,7 @@ public class AddClothes extends Fragment {
         des = view.findViewById(R.id.Des_box);
         image = view.findViewById(R.id.clothesView);
         upload = view.findViewById(R.id.PostRent);
+        upload = view.findViewById(R.id.PostRent);
         pd = new ProgressDialog(getContext());
         pd.setCanceledOnTouchOutside(false);
         Intent intent = getActivity().getIntent();
