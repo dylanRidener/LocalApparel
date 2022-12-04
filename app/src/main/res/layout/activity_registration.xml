@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00E5DF"
     tools:context=".RegistrationActivity">
 
     <TextView
@@ -21,7 +21,6 @@
 
     <TextView
         android:id="@+id/names"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/teacher"
         android:layout_marginStart="35dp"
@@ -108,7 +107,7 @@
         android:textAllCaps="true"
         android:textColor="@android:color/background_light"
         android:textSize="24sp" />
-<!--in order to change the default purple color of button:
+    <!--in order to change the default purple color of button:
     https://www.youtube.com/watch?v=AdlxIdYus14
 -->
     <TextView

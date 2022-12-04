@@ -7,44 +7,34 @@
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2905" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4805" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/name_arrow.xml" value="0.2905" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/profile_pic_foreground.xml" value="0.272" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/registration_button.xml" value="0.2905" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/rent_art.xml" value="0.272" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/drawable/text_box_registration.xml" value="0.2905" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_dashboard.xml" value="0.1" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_main.xml" value="0.45085470085470086" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_registration.xml" value="0.1" />
+        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_registration.xml" value="0.25" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/activity_splash_screen.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/clothing_item.xml" value="0.2977777777777778" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/fragment_buy.xml" value="0.45085470085470086" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/fragment_profile.xml" value="0.24615384615384617" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/fragment_profile_editor.xml" value="0.5" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/fragment_rent.xml" value="0.3800947867298578" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/fragment_selling_closet.xml" value="0.3800947867298578" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/help_page.xml" value="0.22034252297410192" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/profile_page.xml" value="0.45085470085470086" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/layout/selling_posts.xml" value="0.45085470085470086" />
-        <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/LocalApparel/app/src/main/res/menu/bottom_options.xml" value="0.28888888888888886" />
         <entry key="..\:/Users/riden/OneDrive/eclipse.cloud.workspace/Documents/1. College docs/13.Fall 2022/CMSC436/replacement/app/src/main/res/layout/activity_splash_screen.xml" value="0.2672239108409321" />
         <entry key="app/src/main/res/drawable/add_clothing_foreground.xml" value="0.1365" />
-        <entry key="app/src/main/res/drawable/closet.xml" value="0.1405" />
+        <entry key="app/src/main/res/drawable/buy_art.xml" value="0.1765" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1365" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1365" />
-        <entry key="app/src/main/res/drawable/ic_more.xml" value="0.2595" />
         <entry key="app/src/main/res/drawable/profile_pic_foreground.xml" value="0.1365" />
         <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.12604166666666666" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.12604166666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1703125" />
         <entry key="app/src/main/res/layout/activity_registration.xml" value="0.12604166666666666" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.12604166666666666" />
         <entry key="app/src/main/res/layout/clothing_item.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_buy.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_profile_editor.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/fragment_rent.xml" value="0.17481884057971014" />
-        <entry key="app/src/main/res/layout/fragment_selling_closet.xml" value="0.32991638183593747" />
+        <entry key="app/src/main/res/layout/fragment_selling_closet.xml" value="0.1" />
         <entry key="app/src/main/res/layout/help_page.xml" value="0.21656050955414013" />
         <entry key="app/src/main/res/layout/profile_page.xml" value="0.12604166666666666" />
-        <entry key="app/src/main/res/layout/selling_posts.xml" value="0.214768662333378" />
+        <entry key="app/src/main/res/layout/selling_posts.xml" value="0.1703125" />
       </map>
     </option>
   </component>
