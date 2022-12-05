@@ -65,6 +65,7 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
         final String descri = postObjects.get(position).getDescription();
         final String ptime = postObjects.get(position).getPtime();
         final String buyOrRent = postObjects.get(position).getbuyOrRent();
+        final String purchased = postObjects.get(position).getAlive();
         String dp = postObjects.get(position).getUdp();
         final String image = postObjects.get(position).getUimage();
         holder.name.setText(nameh);
@@ -87,13 +88,14 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
         holder.clickPost.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                Boolean wasNotPurchased = purchased.equals("No");
                 if (myuid.equals(uid)) {
                     sellClosetHandler(ptime, image);
-                } else if (buyOrRent.equals("Rent")) {
+                } else if (buyOrRent.equals("Rent") && wasNotPurchased) {
                     rentHandler(ptime, image);
-                } else { //current layout must be in buy
+                } else if (buyOrRent.equals("Buy") && wasNotPurchased) { //current layout must be in buy
                     buyHandler(ptime, image);
-                }
+                } else { return;}
             }
         });
 
