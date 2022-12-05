@@ -42,8 +42,8 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
     public PostHolder(Context context, List<PostObjects> postObjects) {
         this.context = context;
         this.postObjects = postObjects;
-        window = new ProgressDialog(context);
-        window.setCanceledOnTouchOutside(false);
+        //window = new ProgressDialog(context);
+       // window.setCanceledOnTouchOutside(false);
         myuid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         postref = FirebaseDatabase.getInstance().getReference().child("Posts");
     }
