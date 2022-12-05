@@ -12,7 +12,7 @@
     app:contentPadding="5dp">
 
     <LinearLayout
-        android:id="@+id/toBuy"
+        android:id="@+id/clickPost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black"
@@ -63,7 +63,7 @@
                 android:layout_gravity="right"
                 android:background="@color/theme_pink"
                 android:textColor="@color/purple_500"
-                android:textSize="30sp" />
+                android:textSize="35sp" />
 
         </LinearLayout>
 

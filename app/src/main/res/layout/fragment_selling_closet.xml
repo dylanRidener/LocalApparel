@@ -6,10 +6,9 @@
     android:id="@+id/closet"
     tools:context=".SellingClosetFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/postrecyclerview"
+        android:tag="selling_closet"
         android:layout_width="match_parent"
         android:layout_height="489dp"
         android:layout_marginTop="50dp" />
@@ -17,22 +16,22 @@
     <Button
         android:id="@+id/AddButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="62dp"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="550dp"
-        android:backgroundTint="@color/theme_pink"
+        android:layout_marginTop="555dp"
+        android:background="@drawable/registration_button"
         android:text="@string/add_button"
         android:textSize="40sp" />
 
-    <TextView
+    <Button
         android:id="@+id/purchases"
         android:layout_width="163dp"
         android:layout_height="62dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="555dp"
-        android:background="@color/theme_pink"
+        android:background="@drawable/registration_button"
         android:gravity="center"
-        android:text="Previous Orders"
+        android:text="Past Orders"
         android:textColor="@color/black"
         android:textSize="22dp" />
 
@@ -44,8 +43,7 @@
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="Current Orders:"
+        android:background="@color/theme_pink"
         android:textColor="@color/black"
         android:textSize="22dp" />
-
-
 </FrameLayout>

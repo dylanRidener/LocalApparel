@@ -1,9 +1,10 @@
 package root.localApparel;
 
 public class PostObjects {
-    String pid, ptime;
+    String ptime;
     String title, description, price;
     String udp, uemail, uid, uimage, uname, getbuyOrRent;
+    String addressToSend, purchased, buyer;
 
     public String getUid() {
         return uid;
@@ -81,11 +82,33 @@ public class PostObjects {
         return getbuyOrRent;
     }
 
-    public void getbuyOrRent(String pid) {
+    public void setbuyOrRent(String getbuyOrRent) {
         this.getbuyOrRent = getbuyOrRent;
     }
 
+    public String getAddress() {
+        return addressToSend;
+    }
 
+    public void setAddress(String addressToSend) {
+        this.addressToSend = addressToSend;
+    }
+
+    public String getAlive() {
+        return purchased;
+    }
+
+    public void setAlive(String purchased) {
+        this.purchased = purchased;
+    }
+
+    public String getBuyer() {
+        return buyer;
+    }
+
+    public void setBuyer(String buyer) {
+        this.buyer = buyer;
+    }
 
 
 

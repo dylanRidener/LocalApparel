@@ -319,7 +319,8 @@ public class ProfileEditor extends AppCompatActivity {
 
                             } else {
                                 Glide.with(ProfileEditor.this).load(updatePic).into(userpic);
-                            }                        } catch (Exception error) {
+                            }
+                        } catch (Exception error) {
 
                         }
                         changeName.setText(name1);

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/closet"
+    tools:context=".prevOrders">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postrecyclerview_prev_orders"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:layout_marginTop="50dp"
+        android:tag="selling_closet" />
+
+    <TextView
+        android:id="@+id/Currentorders"
+        android:layout_width="161dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Previous Orders:"
+        android:background="@color/theme_pink"
+        android:textColor="@color/black"
+        android:textSize="21dp" />
+</FrameLayout>

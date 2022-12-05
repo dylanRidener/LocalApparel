@@ -60,8 +60,22 @@ public class RentFragment extends Fragment {
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     Boolean notMyPosts = !dataSnapshot1.child("uid").getValue().equals(myuid);
                     Boolean toRent = dataSnapshot1.child("buyOrRent").getValue().equals("Rent");
-                    if (notMyPosts && toRent) {
+                    Boolean isNotPurchased = dataSnapshot1.child("purchased").getValue().equals("No");
+                    if (notMyPosts && toRent && isNotPurchased) {
                         PostObjects modelPost = dataSnapshot1.getValue(PostObjects.class);
+                        modelPost.setbuyOrRent("Rent");
+                        modelPost.setDescription((String) dataSnapshot1.child("description").getValue());
+                        modelPost.setPrice((String) dataSnapshot1.child("price").getValue());
+                        modelPost.setPtime((String) dataSnapshot1.child("ptime").getValue());
+                        modelPost.setTitle((String) dataSnapshot1.child("title").getValue());
+                        modelPost.setUdp((String) dataSnapshot1.child("udp").getValue());
+                        modelPost.setUemail((String) dataSnapshot1.child("uemail").getValue());
+                        modelPost.setUid((String) dataSnapshot1.child("uid").getValue());
+                        modelPost.setUimage((String) dataSnapshot1.child("uimage").getValue());
+                        modelPost.setUname((String) dataSnapshot1.child("uname").getValue());
+                        modelPost.setAlive((String) dataSnapshot1.child("purchased").getValue());
+                        modelPost.setAddress((String) dataSnapshot1.child("addressToSend").getValue());
+                        modelPost.setBuyer((String) dataSnapshot1.child("buyer").getValue());
                         posts.add(modelPost);
                     }
                 }

@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BuyFragment extends Fragment {
+public class prevOrders extends Fragment {
 
     FirebaseAuth firebaseAuth;
     String myuid;
@@ -30,16 +29,15 @@ public class BuyFragment extends Fragment {
     List<PostObjects> posts;
     PostHolder postHolder;
 
-    public BuyFragment() {
-        // Required empty public constructor
+    public prevOrders() {
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_buy, container, false);
+        View view = inflater.inflate(R.layout.fragment_prev_orders, container, false);
         firebaseAuth = FirebaseAuth.getInstance();
-        recyclerView = view.findViewById(R.id.postrecyclerview);
+        recyclerView = view.findViewById(R.id.postrecyclerview_prev_orders);
         recyclerView.setHasFixedSize(true);
         myuid = firebaseAuth.getInstance().getUid();
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
@@ -58,24 +56,8 @@ public class BuyFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 posts.clear();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    Boolean notMyPosts = !dataSnapshot1.child("uid").getValue().equals(myuid);
-                    Boolean toBuy = dataSnapshot1.child("buyOrRent").getValue().equals("Buy");
-                    Boolean isNotPurchased = dataSnapshot1.child("purchased").getValue().equals("No");
-                    if (notMyPosts && toBuy && isNotPurchased) {
+                    if (dataSnapshot1.child("buyer").getValue().equals(myuid)) {
                         PostObjects modelPost = dataSnapshot1.getValue(PostObjects.class);
-                        modelPost.setbuyOrRent("Buy");
-                        modelPost.setDescription((String) dataSnapshot1.child("description").getValue());
-                        modelPost.setPrice((String) dataSnapshot1.child("price").getValue());
-                        modelPost.setPtime((String) dataSnapshot1.child("ptime").getValue());
-                        modelPost.setTitle((String) dataSnapshot1.child("title").getValue());
-                        modelPost.setUdp((String) dataSnapshot1.child("udp").getValue());
-                        modelPost.setUemail((String) dataSnapshot1.child("uemail").getValue());
-                        modelPost.setUid((String) dataSnapshot1.child("uid").getValue());
-                        modelPost.setUimage((String) dataSnapshot1.child("uimage").getValue());
-                        modelPost.setUname((String) dataSnapshot1.child("uname").getValue());
-                        modelPost.setAlive((String) dataSnapshot1.child("purchased").getValue());
-                        modelPost.setAddress((String) dataSnapshot1.child("addressToSend").getValue());
-                        modelPost.setBuyer((String) dataSnapshot1.child("buyer").getValue());
                         posts.add(modelPost);
                     }
                 }
@@ -85,14 +67,10 @@ public class BuyFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+
                 Toast.makeText(getActivity(), databaseError.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        setHasOptionsMenu(true);
-        super.onCreate(savedInstanceState);
-    }
 }

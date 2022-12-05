@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -62,6 +63,7 @@ public class ProfileFragment extends Fragment {
 
         // creating editor button for username
         Button editor = view.findViewById(R.id.button9);
+        Button prevSales = view.findViewById(R.id.prof_pastsales);
 
 
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -102,6 +104,17 @@ public class ProfileFragment extends Fragment {
                 startActivity(new Intent(getActivity(), ProfileEditor.class));
             }
         });
+
+        prevSales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment addFrag2 = new pastSales();
+                FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
+                fm.replace(R.id.content, addFrag2).commit();
+            }
+        });
+
+
         return view;
 
     }

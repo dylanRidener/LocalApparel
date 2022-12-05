@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,15 +36,14 @@ public class SellingClosetFragment extends Fragment {
     RecyclerView recyclerView;
     List<PostObjects> posts;
     PostHolder postHolder;
+    Button addBtn, purchases;
 
     public SellingClosetFragment() {
         // Required empty public constructor
     }
-    Button addBtn;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_selling_closet, container, false);
         firebaseAuth = FirebaseAuth.getInstance();
         recyclerView = view.findViewById(R.id.postrecyclerview);
@@ -54,6 +55,7 @@ public class SellingClosetFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         posts = new ArrayList<>();
         loadPosts();
+        purchases = view.findViewById(R.id.purchases);
         addBtn = view.findViewById(R.id.AddButton);
         addBtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -63,8 +65,15 @@ public class SellingClosetFragment extends Fragment {
                 fm.replace(R.id.content, addFrag).commit();
             }
         });
+        purchases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment addFrag2 = new prevOrders();
+                FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
+                fm.replace(R.id.content, addFrag2).commit();
 
-        // Inflate the layout for this fragment
+            }
+        });
         return view;
     }
     private void loadPosts() {
@@ -74,7 +83,9 @@ public class SellingClosetFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 posts.clear();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    if (dataSnapshot1.child("uid").getValue().equals(myuid)) {
+                    Boolean mySales = dataSnapshot1.child("uid").getValue().equals(myuid);
+                    Boolean notSold = dataSnapshot1.child("purchased").getValue().equals("No");
+                    if (mySales && notSold) {
                         PostObjects modelPost = dataSnapshot1.getValue(PostObjects.class);
                         posts.add(modelPost);
                     }

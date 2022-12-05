@@ -24,19 +24,18 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="556dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="200dp"
         android:backgroundTint="@color/theme_pink"
-        android:text="Edit"
+        android:text="Edit Profile"
+        android:background="@drawable/registration_button"
         android:textColor="@color/black"
         android:textSize="24dp"
-
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.789"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/prof_pastsales" />
 
     <TextView
         android:id="@+id/textView2"
@@ -102,14 +101,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/prof_pastorders"
-        android:layout_width="wrap_content"
+        android:id="@+id/prof_pastsales"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:textSize="24dp"
-        android:backgroundTint="@color/theme_pink"
-        android:text="Past Orders"
+        android:background="@drawable/registration_button"
+        android:text="Past Sales"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
