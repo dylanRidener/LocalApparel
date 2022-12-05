@@ -37,13 +37,10 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
     ViewGroup source;
     String myuid, tag;
     private DatabaseReference postref;
-    ProgressDialog window;
 
     public PostHolder(Context context, List<PostObjects> postObjects) {
         this.context = context;
         this.postObjects = postObjects;
-        window = new ProgressDialog(context);
-        window.setCanceledOnTouchOutside(false);
         myuid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         postref = FirebaseDatabase.getInstance().getReference().child("Posts");
     }
@@ -91,13 +88,10 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
             @Override
             public void onClick(View view) {
                 if (myuid.equals(uid)) {
-                    window.setMessage("Delete");
                     sellClosetHandler(ptime, image);
                 } else if (buyOrRent.equals("Rent")) {
-                    window.setMessage("Rent");
                     rentHandler(ptime, image);
                 } else { //current layout must be in buy
-                    window.setMessage("Buy");
                     buyHandler(ptime, image);
                 }
             }
@@ -171,7 +165,7 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                window.dismiss();
+
             }
         });
         builder.create().show();
@@ -198,7 +192,6 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                window.dismiss();
             }
         });
         builder.create().show();
@@ -228,14 +221,12 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                window.dismiss();
             }
         });
         builder.create().show();
     }
 
     private void deletePost(final String ptime, String image) {
-        window.setMessage("Deleting");
         StorageReference picRef = FirebaseStorage.getInstance().getReferenceFromUrl(image);
         DatabaseReference postRef = FirebaseDatabase.getInstance().getReference("Posts");
 
