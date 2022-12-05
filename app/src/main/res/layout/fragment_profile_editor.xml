@@ -5,7 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ProfileEditor">
 
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/theme_blue"></FrameLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView2"
@@ -13,10 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:gravity="center"
-        android:background="@color/pink_theme"
+        android:background="@color/theme_pink"
         android:textColor="@color/black"
         android:text="Edit Profile"
-        android:textSize="20dp"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,8 +42,8 @@
         android:layout_marginTop="24dp"
         android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        android:background="@color/pink_theme"
+        android:textSize="25dp"
+        android:background="@color/theme_pink"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,19 +56,19 @@
         android:layout_marginTop="24dp"
         android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        android:background="@color/pink_theme"
+        android:textSize="25dp"
+        android:background="@color/theme_pink"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_prof" />
 
-    <TextView
+    <Button
         android:id="@+id/password"
         android:layout_width="180dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
-        android:background="@color/pink_theme"
+        android:background="@drawable/registration_button"
         android:gravity="center"
         android:text="Change Password"
         android:textColor="@color/black"
@@ -65,12 +78,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/picture" />
 
-    <TextView
+    <Button
         android:id="@+id/email"
         android:layout_width="180dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
-        android:background="@color/pink_theme"
+        android:background="@drawable/registration_button"
         android:gravity="center"
         android:text="Change Email"
         android:textColor="@color/black"
@@ -80,27 +93,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
-    <TextView
+    <Button
         android:id="@+id/name"
         android:layout_width="180dp"
         android:layout_height="30dp"
         android:layout_marginTop="24dp"
-        android:background="@color/pink_theme"
         android:gravity="center"
         android:text="Change Name"
         android:textColor="@color/black"
+        android:background="@drawable/registration_button"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <TextView
+    <Button
         android:id="@+id/picture"
         android:layout_width="180dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
-        android:background="@color/pink_theme"
+        android:background="@drawable/registration_button"
         android:gravity="center"
         android:text="Change Picture"
         android:textColor="@color/black"
@@ -110,7 +123,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/userPic"
         android:layout_width="161dp"
         android:layout_height="142dp"
@@ -126,7 +139,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="352dp"
-        android:background="@color/pink_theme"
+        android:background="@color/theme_pink"
         android:text="ZIP: 56565"
         android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/userPic"

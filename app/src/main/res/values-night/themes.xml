@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.LocalApparel" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/pink_theme</item>
+        <item name="colorPrimary">@color/theme_pink</item>
         <item name="colorPrimaryVariant">@color/black</item>
-        <item name="colorOnPrimary">@color/pink_theme</item>
+        <item name="colorOnPrimary">@color/theme_pink</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/blue_theme</item>
+        <item name="colorSecondary">@color/theme_blue</item>
         <item name="colorSecondaryVariant">@color/black</item>
-        <item name="colorOnSecondary">@color/blue_theme</item>
+        <item name="colorOnSecondary">@color/theme_blue</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

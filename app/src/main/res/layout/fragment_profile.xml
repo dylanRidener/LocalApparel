@@ -6,17 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ProfileEditor">
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/theme_blue">
+        </FrameLayout>
+    </LinearLayout>
+
     <Button
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="@color/pink_theme"
+        android:layout_marginTop="556dp"
+        android:backgroundTint="@color/theme_pink"
         android:text="Edit"
         android:textColor="@color/black"
+        android:textSize="24dp"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -25,9 +44,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="My Profile"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:textColor="@color/black"
-        android:background="@color/pink_theme"
+        android:background="@color/theme_pink"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,10 +57,10 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="24dp"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:gravity="center"
         android:textColor="@color/black"
-        android:background="@color/pink_theme"
+        android:background="@color/theme_pink"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,16 +70,16 @@
         android:id="@+id/email_prof"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:gravity="center"
         android:textColor="@color/black"
-        android:background="@color/pink_theme"
+        android:background="@color/theme_pink"
         app:layout_constraintBottom_toTopOf="@+id/userPic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_prof" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/userPic"
         android:layout_width="161dp"
         android:layout_height="142dp"
@@ -76,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="396dp"
-        android:background="@color/pink_theme"
+        android:background="@color/theme_pink"
         android:text="ZIP: 56565"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +107,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/pink_theme"
+        android:textSize="24dp"
+        android:backgroundTint="@color/theme_pink"
         android:text="Past Orders"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"

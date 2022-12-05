@@ -15,7 +15,7 @@
         android:layout_marginTop="90dp"
         android:gravity="center"
         android:text="Sign Up Here"
-        android:textColor="@color/pink_theme"
+        android:textColor="@color/theme_pink"
         android:textSize="28sp"
         android:textStyle="bold|italic" />
 
