@@ -92,7 +92,7 @@ public class SellingClosetFragment extends Fragment {
                 }
                 postHolder = new PostHolder(getActivity(), posts);
                 recyclerView.setAdapter(postHolder);
-            }
+            } //test
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
