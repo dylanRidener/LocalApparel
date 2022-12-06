@@ -47,7 +47,6 @@ public class LoginActivity extends AppCompatActivity {
         actionBar.setDisplayShowHomeEnabled(false);
         actionBar.setDisplayHomeAsUpEnabled(false);
 
-        // initialising the layout items
         email = findViewById(R.id.login_email);
         password = findViewById(R.id.login_password);
         newdnewaccount = findViewById(R.id.needs_new_account);

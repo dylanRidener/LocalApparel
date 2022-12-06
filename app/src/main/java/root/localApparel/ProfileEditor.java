@@ -467,7 +467,7 @@ public class ProfileEditor extends AppCompatActivity {
                     return;
                 }
 
-                // with old and new password, check against firebase then update
+                // verify old vs new password and place into firebase
                 final FirebaseUser curr = firebaseAuth.getCurrentUser();
                 AuthCredential authCredential = EmailAuthProvider.getCredential(curr.getEmail(), oldVal);
                 curr.reauthenticate(authCredential).addOnSuccessListener(new OnSuccessListener<Void>() {

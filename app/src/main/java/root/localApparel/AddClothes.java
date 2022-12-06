@@ -76,7 +76,6 @@ public class AddClothes extends Fragment {
         pd.setCanceledOnTouchOutside(false);
         Intent intent = getActivity().getIntent();
 
-        // Retrieving the user data like name ,email and profile pic using query
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
         databaseReference.addValueEventListener((new ValueEventListener() {
             @Override
