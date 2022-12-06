@@ -79,7 +79,7 @@ public class BuyFragment extends Fragment {
                         posts.add(modelPost);
                     }
                 }
-                postHolder = new PostHolder(getActivity(), posts);
+                postHolder = new PostHolder(getActivity(), posts, "BuyFragment");
                 recyclerView.setAdapter(postHolder);
             }
 

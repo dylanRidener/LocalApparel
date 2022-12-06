@@ -79,7 +79,7 @@ public class RentFragment extends Fragment {
                         posts.add(modelPost);
                     }
                 }
-                postHolder = new PostHolder(getActivity(), posts);
+                postHolder = new PostHolder(getActivity(), posts, "RentFragment");
                 recyclerView.setAdapter(postHolder);
             }
 

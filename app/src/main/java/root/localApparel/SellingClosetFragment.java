@@ -90,7 +90,7 @@ public class SellingClosetFragment extends Fragment {
                         posts.add(modelPost);
                     }
                 }
-                postHolder = new PostHolder(getActivity(), posts);
+                postHolder = new PostHolder(getActivity(), posts, "SellingclosetFragment");
                 recyclerView.setAdapter(postHolder);
             }
 

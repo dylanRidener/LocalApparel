@@ -61,7 +61,7 @@ public class prevOrders extends Fragment {
                         posts.add(modelPost);
                     }
                 }
-                postHolder = new PostHolder(getActivity(), posts);
+                postHolder = new PostHolder(getActivity(), posts, "prevOrders");
                 recyclerView.setAdapter(postHolder);
             }
 

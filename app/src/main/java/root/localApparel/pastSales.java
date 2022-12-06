@@ -64,7 +64,7 @@ public class pastSales extends Fragment {
                         posts.add(modelPost);
                     }
                 }
-                postHolder = new PostHolder(getActivity(), posts);
+                postHolder = new PostHolder(getActivity(), posts, "pastSales");
                 recyclerView.setAdapter(postHolder);
             }
 

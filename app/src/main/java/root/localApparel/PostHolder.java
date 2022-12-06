@@ -35,12 +35,13 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
 
     Context context;
     ViewGroup source;
-    String myuid, tag;
+    String myuid, tag, currFrag;
     private DatabaseReference postref;
 
-    public PostHolder(Context context, List<PostObjects> postObjects) {
+    public PostHolder(Context context, List<PostObjects> postObjects, String currFrag) {
         this.context = context;
         this.postObjects = postObjects;
+        this.currFrag = currFrag;
         myuid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         postref = FirebaseDatabase.getInstance().getReference().child("Posts");
     }
@@ -88,12 +89,11 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
         holder.clickPost.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Boolean wasNotPurchased = purchased.equals("No");
-                if (myuid.equals(uid)) {
+                if (myuid.equals(uid) && currFrag.equals("SellingclosetFragment")) {
                     sellClosetHandler(ptime, image);
-                } else if (buyOrRent.equals("Rent") && wasNotPurchased) {
+                } else if (buyOrRent.equals("Rent") && currFrag.equals("RentFragment")) {
                     rentHandler(ptime, image);
-                } else if (buyOrRent.equals("Buy") && wasNotPurchased) { //current layout must be in buy
+                } else if (buyOrRent.equals("Buy") && currFrag.equals("BuyFragment")) { //current layout must be in buy
                     buyHandler(ptime, image);
                 } else { return;}
             }
@@ -120,47 +120,54 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
                 postRef.child(ptime).child("purchased").setValue("Yes");
                 postRef.child(ptime).child("buyer").setValue(myuid);
 
-                AlertDialog.Builder address = new AlertDialog.Builder(context);
-                builder.setTitle("Address");
-
-                LinearLayout layout2 = new LinearLayout(context);
-                layout2.setOrientation(LinearLayout.VERTICAL);
-                layout2.setPadding(10,10,10,10);
-
-                final EditText name = new EditText(context);
-                name.setHint("Enter Your Name");
-                layout2.addView(name);
-                final EditText Street = new EditText(context);
-                Street.setHint("Enter Street Address");
-                layout2.addView(Street);
-                final EditText City = new EditText(context);
-                City.setHint("Enter City");
-                layout2.addView(City);
-                final EditText State = new EditText(context);
-                State.setHint("Enter State");
-                layout2.addView(State);
-                final EditText ZipCode = new EditText(context);
-                ZipCode.setHint("Enter Zipcode");
-                layout2.addView(ZipCode);
-
-                builder.setPositiveButton("Complete", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        final String nameStr = name.getText().toString().trim();
-                        final String streetStr = Street.getText().toString().trim();
-                        final String cityStr= City.getText().toString().trim();
-                        final String stateStr = State.getText().toString().trim();
-                        final String zipStr = ZipCode.getText().toString().trim();
-                        if (TextUtils.isEmpty(nameStr) || TextUtils.isEmpty(streetStr) || TextUtils.isEmpty(cityStr) || TextUtils.isEmpty(stateStr) || TextUtils.isEmpty(zipStr)) {
-                            Toast.makeText(context, "Missing inputs to complete address", Toast.LENGTH_LONG).show();
-                            return;
-                        }
-                        final String addressComplete = "" + nameStr + ": " + streetStr + ", " + cityStr + ", " + stateStr + ", " + zipStr;
-                        postRef.child(ptime).child("addressToSend").setValue(addressComplete);
-                    }
-                });
-
-                Toast.makeText(context, " Item Purchased ", Toast.LENGTH_LONG).show();
+//                AlertDialog.Builder address = new AlertDialog.Builder(context);
+//                builder.setTitle("Address");
+//                builder.setMessage("Please input Your Address");
+//
+//                LinearLayout layout2 = new LinearLayout(context);
+//                layout2.setOrientation(LinearLayout.VERTICAL);
+//                layout2.setPadding(1,1,1,1);
+//
+//                final EditText name = new EditText(context);
+//                final EditText Street = new EditText(context);
+//                final EditText City = new EditText(context);
+//                final EditText State = new EditText(context);
+//                final EditText ZipCode = new EditText(context);
+//
+//                name.setHint("Enter Your Name");
+//                layout2.addView(name);
+//
+//                Street.setHint("Enter Street Address");
+//                layout2.addView(Street);
+//
+//                City.setHint("Enter City");
+//                layout2.addView(City);
+//
+//                State.setHint("Enter State");
+//                layout2.addView(State);
+//
+//                ZipCode.setHint("Enter Zipcode");
+//                layout2.addView(ZipCode);
+//
+//                address.setPositiveButton("Complete", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        final String nameStr = name.getText().toString().trim();
+//                        final String streetStr = Street.getText().toString().trim();
+//                        final String cityStr= City.getText().toString().trim();
+//                        final String stateStr = State.getText().toString().trim();
+//                        final String zipStr = ZipCode.getText().toString().trim();
+//                        if (TextUtils.isEmpty(nameStr) || TextUtils.isEmpty(streetStr) || TextUtils.isEmpty(cityStr) || TextUtils.isEmpty(stateStr) || TextUtils.isEmpty(zipStr)) {
+//                            Toast.makeText(context, "Missing inputs to complete address", Toast.LENGTH_LONG).show();
+//                            return;
+//                        }
+//                        final String addressComplete = "" + nameStr + ": " + streetStr + ", " + cityStr + ", " + stateStr + ", " + zipStr;
+//                        postRef.child(ptime).child("addressToSend").setValue(addressComplete);
+//                    }
+//                });
+//
+//                address.create().show();
+//                Toast.makeText(context, " Item Purchased ", Toast.LENGTH_LONG).show();
             }
         });
 
