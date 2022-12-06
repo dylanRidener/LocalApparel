@@ -119,55 +119,6 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
                 DatabaseReference postRef = FirebaseDatabase.getInstance().getReference("Posts");
                 postRef.child(ptime).child("purchased").setValue("Yes");
                 postRef.child(ptime).child("buyer").setValue(myuid);
-
-//                AlertDialog.Builder address = new AlertDialog.Builder(context);
-//                builder.setTitle("Address");
-//                builder.setMessage("Please input Your Address");
-//
-//                LinearLayout layout2 = new LinearLayout(context);
-//                layout2.setOrientation(LinearLayout.VERTICAL);
-//                layout2.setPadding(1,1,1,1);
-//
-//                final EditText name = new EditText(context);
-//                final EditText Street = new EditText(context);
-//                final EditText City = new EditText(context);
-//                final EditText State = new EditText(context);
-//                final EditText ZipCode = new EditText(context);
-//
-//                name.setHint("Enter Your Name");
-//                layout2.addView(name);
-//
-//                Street.setHint("Enter Street Address");
-//                layout2.addView(Street);
-//
-//                City.setHint("Enter City");
-//                layout2.addView(City);
-//
-//                State.setHint("Enter State");
-//                layout2.addView(State);
-//
-//                ZipCode.setHint("Enter Zipcode");
-//                layout2.addView(ZipCode);
-//
-//                address.setPositiveButton("Complete", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        final String nameStr = name.getText().toString().trim();
-//                        final String streetStr = Street.getText().toString().trim();
-//                        final String cityStr= City.getText().toString().trim();
-//                        final String stateStr = State.getText().toString().trim();
-//                        final String zipStr = ZipCode.getText().toString().trim();
-//                        if (TextUtils.isEmpty(nameStr) || TextUtils.isEmpty(streetStr) || TextUtils.isEmpty(cityStr) || TextUtils.isEmpty(stateStr) || TextUtils.isEmpty(zipStr)) {
-//                            Toast.makeText(context, "Missing inputs to complete address", Toast.LENGTH_LONG).show();
-//                            return;
-//                        }
-//                        final String addressComplete = "" + nameStr + ": " + streetStr + ", " + cityStr + ", " + stateStr + ", " + zipStr;
-//                        postRef.child(ptime).child("addressToSend").setValue(addressComplete);
-//                    }
-//                });
-//
-//                address.create().show();
-//                Toast.makeText(context, " Item Purchased ", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -194,6 +145,7 @@ public class PostHolder extends RecyclerView.Adapter<PostHolder.MyHolder> {
             public void onClick(DialogInterface dialog, int which) {
                 DatabaseReference postRef = FirebaseDatabase.getInstance().getReference("Posts");
                 postRef.child(ptime).child("purchased").setValue("Yes");
+                postRef.child(ptime).child("buyer").setValue(myuid);
                 Toast.makeText(context, " Item Rented ", Toast.LENGTH_LONG).show();
             }
         });
